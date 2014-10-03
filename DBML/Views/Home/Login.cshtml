@@ -1,0 +1,45 @@
+﻿@model DBML.Models.User
+ 
+@{
+    ViewBag.Title = "Login";
+}
+ 
+<h2>Login</h2>
+ 
+@using (Html.BeginForm("Login","Home", FormMethod.Post))
+{
+    //this  is for create form tag
+    @Html.AntiForgeryToken()          // this is for prevent CSRF attack
+    @Html.ValidationSummary(true)
+    <fieldset style="width:600px; border:solid 5px green; margin-left:5in;">
+        <legend> <b>User Login</b></legend>
+   
+    <table>
+        <tr>
+            <td>@Html.LabelFor(a=>a.UserName)</td>
+            <td>@Html.TextBoxFor(a=>a.UserName)</td>
+            <td>@Html.ValidationMessageFor(a=>a.UserName)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(a=>a.Password)
+            </td>
+            <td>
+                @Html.PasswordFor(a=>a.Password)
+            </td>
+            <td>
+                @Html.ValidationMessageFor(a=>a.Password)
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="button">
+                <input type="submit" value="Login" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+        </fieldset>
+}
+
+ 

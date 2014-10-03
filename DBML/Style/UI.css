@@ -1,0 +1,48 @@
+
+    .input [type=text] 
+    {
+        background: #ccc; 
+        color: #2E6E9E;
+        font-weight: bold;
+        border: 1px solid #C5DBEC;
+        padding: 5px;
+        border-radius: 5px;
+        box-decoration-break:clone;
+        width:150px;
+        text-align:center;
+        margin-left:2.5in;
+    }    
+
+    .input2 [type=password] 
+    {
+        background: #ccc; 
+        color: #2E6E9E;
+        font-weight: bold;
+        border: 1px solid #C5DBEC;
+        padding: 5px;
+        border-radius: 5px;
+        box-decoration-break:clone;
+        width:150px;
+        text-align:center;
+        margin-left:2.5in;
+    }          
+
+    .lable 
+    {
+        font-weight: bold;
+        padding: 5px;
+        margin-left:2.5in;
+    }       
+
+    .button [type=submit] 
+    {
+        font-weight: bold;
+        padding: 5px;
+        margin-left:2.85in;
+        padding:5px 15px;
+        background:lightblue;
+        border:0 none;
+        cursor:pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }       

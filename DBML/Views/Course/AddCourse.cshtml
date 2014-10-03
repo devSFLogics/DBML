@@ -1,0 +1,70 @@
+﻿@model DBML.Models.UserCourse
+
+@{
+    ViewBag.Title = "Add Courses";
+}
+
+<link href="~/Style/UI.css" rel="stylesheet" />
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+ 
+    <fieldset style="width:600px; border:solid 5px green; margin-left:5in;">
+        <legend> <b>User Register</b></legend>
+        @Html.AntiForgeryToken()
+        @if (ViewBag.Message != null)
+        {
+            <div style="border:solid 50px green; width:400px">
+                @ViewBag.Message
+            </div>
+        }
+        <div class="lable">
+            @Html.LabelFor(model => model.Course1)
+        </div>
+        <div class="input">
+            @Html.EditorFor(model => model.Course1)
+            @Html.ValidationMessageFor(model => model.Course1)
+        </div>
+ 
+        <div class="lable">
+            @Html.LabelFor(model => model.Course2)
+        </div>
+        <div class="input">
+            @Html.EditorFor(model => model.Course2)
+            @Html.ValidationMessageFor(model => model.Course2)
+        </div>
+ 
+        <div class="lable">
+            @Html.LabelFor(model => model.Course3)
+        </div>
+        <div class="input">
+            @Html.EditorFor(model => model.Course3)
+            @Html.ValidationMessageFor(model => model.Course3)
+        </div>
+        <div class="lable">
+            @Html.LabelFor(model => model.Course4)
+        </div>
+        <div class="input">
+            @Html.EditorFor(model => model.Course4)
+            @Html.ValidationMessageFor(model => model.Course4)
+        </div>
+        <div class="lable">
+            @Html.LabelFor(model => model.Course5)
+        </div>
+        <div class="input">
+            @Html.EditorFor(model => model.Course5)
+            @Html.ValidationMessageFor(model => model.Course5)
+        </div>
+        <div class="lable">
+            @Html.LabelFor(model => model.Course6)
+        </div>
+        <div class="input">
+            @Html.EditorFor(model => model.Course6)
+            @Html.ValidationMessageFor(model => model.Course6)
+        </div>
+        
+        <p class="button">
+            <input type="submit" value="Add" />
+        </p>
+    </fieldset>
+} 
